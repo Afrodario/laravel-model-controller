@@ -9,11 +9,11 @@
     @foreach($movies as $key => $movie)
         <div class="card">
             <ul>
-                <li>Titolo: {{$movie->title}}</li>
-                <li>Titolo originale: {{$movie->original_title}}</li>
-                <li>Lingua originale: {{$movie->nationality}}</li>
-                <li>Data di uscita: {{$movie->date}}</li>
-                <li>Valutazione: {{$movie->vote}}</li>
+                <li><span>Titolo:</span> {{$movie->title}}</li>
+                <li><span>Titolo originale:</span> {{$movie->original_title}}</li>
+                <li><span>Lingua originale:</span> {{$movie->nationality}}</li>
+                <li><span>Data di uscita:</span> {{$movie->date}}</li>
+                <li><span>Valutazione:</span> {{$movie->vote}}</li>
             </ul>
         </div>
     @endforeach
