@@ -7,11 +7,17 @@ use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
-    public function home() {
+    public function index() {
         $movies = Movie::all();
 
-        dump($movies);
+        //$movies = Movie::where('vote', '>=', 8)->get();
 
-        return view('home');
+        /*$movies = Movie::where('vote', '>=', 9)
+            ->orderBy('title', 'asc')
+            ->limit(2)
+            ->get();
+        */
+
+        return view('home', compact('movies'));
     }
 }
